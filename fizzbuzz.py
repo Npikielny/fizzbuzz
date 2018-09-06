@@ -47,19 +47,13 @@ Buzz
 n = int(input("How many numbers shall we print? "))
 f = int(input("For multiples of what number shall we print 'Fizz'? "))
 b = int(input("For multiples of what number shall we print 'Buzz'? "))
-outputs = {1:"Fizz",2:"Buzz",3:"FizzBuzz"}
 for i in range(1, n + 1):
-    output = 0
-    #Determining Factors
     if i % (f*b) == 0:
-        output = 3
+        print("FizzBuzz")
     elif i % (f) == 0:
-        output = 1
+        print("Fizz")
     elif i % (b) == 0:
-        output = 2
-    #Determining Proper Output
-    if output != 0:
-        print(outputs[output])
+        print("Buzz")
     else:
         print(i)
     
