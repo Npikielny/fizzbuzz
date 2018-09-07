@@ -2,19 +2,15 @@
 fizzbuzz.py
 Author: Noah Pikielny
 Credit: None
-
 Assignment:
-
 Write a program that prints the numbers from 1 to 100. But for 
 multiples of three print “Fizz” instead of the number and for 
 the multiples of five print “Buzz”. For numbers which are multiples 
 of both three and five print “FizzBuzz”.
-
 We will use a variation of this test in which the last number of 
 the series isn't necessarily 100, and the two numbers being tested 
 for multiples aren't necessarily three and five. For example, your 
 program should behave just like this:
-
 How many numbers shall we print? 25
 For multiples of what number shall we print 'Fizz'? 3
 For multiples of what number shall we print 'Buzz'? 5
@@ -44,16 +40,18 @@ Fizz
 Fizz
 Buzz
 """
-n = int(input("How many numbers shall we print? "))
-f = int(input("For multiples of what number shall we print 'Fizz'? "))
-b = int(input("For multiples of what number shall we print 'Buzz'? "))
-for i in range(1, n + 1):
+n = int(input("How many numbers shall we print?"))
+f = int(input("For multiples of what number shall we print 'Fizz'?"))
+b = int(input("For multiples of what number shall we print 'Buzz'?"))
+terms = list(range(1, n + 1))
+for i in terms:
     if i % (f*b) == 0:
         print("FizzBuzz")
     elif i % (f) == 0:
         print("Fizz")
-    elif i % (b) == 0:
+    elif i % b == 0:
         print("Buzz")
     else:
         print(i)
-    
+
+
