@@ -44,14 +44,17 @@ n = int(input("How many numbers shall we print? "))
 f = int(input("For multiples of what number shall we print 'Fizz'? "))
 b = int(input("For multiples of what number shall we print 'Buzz'? "))
 terms = list(range(1, n + 1))
+
+
 for i in terms:
-    if i % (f*b) == 0:
-        print("FizzBuzz")
-    elif i % (f) == 0:
-        print("Fizz")
-    elif i % b == 0:
-        print("Buzz")
-    else:
-        print(i)
+    output = ""
+    if i % (f) == 0:
+        output = output + "Fizz"
+    if i % b == 0:
+        output = output + "Buzz "
+    if output == "":
+        output = output + str(i)
+    print(output)
+    
 
 
